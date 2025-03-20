@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "pf-2020a8e7": {
+      "type": "pf-2020a8e7",
+      "settings": {}
+    },
+    "featured_blog_D4MjcK": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "pf-2020a8e7",
+    "featured_blog_D4MjcK"
+  ]
+}

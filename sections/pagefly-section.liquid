@@ -1,0 +1,542 @@
+
+{% if section.settings.section_id.size > 0 %}
+  <!-- PageFlyGlobalSection -->
+  {% render 'pagefly-main-js' %}
+  {% render 'pagefly-main-css' %}
+  {% include section.settings.section_id %}
+{% else %}
+  
+    {% if request.design_mode %}
+      <style>.pf-ph{font-size:14px!important;background:#fafafa;padding:20px;text-align:center;border:1px solid #f0f0f0;border-radius:4px;margin:15px}.pf-ph span{display:block;background:#e6f7ff;padding:8px 15px;border:1px solid #91d5ff}</style>
+      <div class="pf-ph">
+        <h3>PageFly Section</h3>
+        <span>No section selected. Please select your section from the list</span>
+      </div>
+    {% endif %}
+  
+{% endif %}
+
+{% schema %}
+{
+  "name": "PageFly Section",
+  "settings": [
+    {
+      "id": "section_id",
+      "type": "select",
+      "label": "Sections",
+      "options": [
+        {
+          "label": "Select section",
+          "value": ""
+        },
+        {
+          "label": "V1-Categories-Quote",
+          "value": "pf-d49c9cbb"
+        },
+        {
+          "label": "V1 - Leadership People Image Hover",
+          "value": "pf-c978e11e"
+        },
+        {
+          "label": "OEM Brands Intro",
+          "value": "pf-f368e819"
+        },
+        {
+          "label": "OEM Brands Hero",
+          "value": "pf-c966f964"
+        },
+        {
+          "label": "Products Hero",
+          "value": "pf-b425e878"
+        },
+        {
+          "label": "Shipboard_RFQ",
+          "value": "pf-24804240"
+        },
+        {
+          "label": "V1-Super-Categories-Feature-4column",
+          "value": "pf-a5db88a3"
+        },
+        {
+          "label": "Cleaning_CTA",
+          "value": "pf-55205c45"
+        },
+        {
+          "label": "V3-Mission-Critical_img_right",
+          "value": "pf-fe813257"
+        },
+        {
+          "label": "V3-Mission-Critical_img_left",
+          "value": "pf-14552637"
+        },
+        {
+          "label": "V3_2-Up_MM_Image_Right",
+          "value": "pf-5d203b78"
+        },
+        {
+          "label": "V3_2-Up_MM",
+          "value": "pf-36f7fd1e"
+        },
+        {
+          "label": "V1-SubSubCategories-Feature-2column",
+          "value": "pf-c37f182a"
+        },
+        {
+          "label": "V1-Super-Categories-Feature-2column",
+          "value": "pf-bea5db88"
+        },
+        {
+          "label": "V1-SubSubCategories-2column-img",
+          "value": "pf-f176fe66"
+        },
+        {
+          "label": "V1-SubSubCategories-2column-imgs",
+          "value": "pf-febbb57d"
+        },
+        {
+          "label": "V1-SubCategories-2column-1/3-right",
+          "value": "pf-9ee2eab4"
+        },
+        {
+          "label": "V1-SubCategories-2column-1/3img",
+          "value": "pf-78d05b57"
+        },
+        {
+          "label": "V1-SubCategories-2column-img",
+          "value": "pf-786a9aea"
+        },
+        {
+          "label": "V1-Super-Categories-Intro",
+          "value": "pf-2fbdf634"
+        },
+        {
+          "label": "V1-Categories-3Column-buttons",
+          "value": "pf-2fcb6b73"
+        },
+        {
+          "label": "V1-Categories-Feature-imgleft",
+          "value": "pf-5e0f0f42"
+        },
+        {
+          "label": "V1-Categories-Feature-imgright",
+          "value": "pf-0690f427"
+        },
+        {
+          "label": "V1-Categories-Feature-text",
+          "value": "pf-15741f25"
+        },
+        {
+          "label": "V1-Categories-Feature-expanding",
+          "value": "pf-acf7a60e"
+        },
+        {
+          "label": "V1-Categories-Intro",
+          "value": "pf-652b23d4"
+        },
+        {
+          "label": "V1-Categories-Hero",
+          "value": "pf-93c12b33"
+        },
+        {
+          "label": "V1-SubSubCategories-2column-1/3-right",
+          "value": "pf-da49c795"
+        },
+        {
+          "label": "V1-SubCategories-2column-collapse",
+          "value": "pf-90fd19c5"
+        },
+        {
+          "label": "V1-SubCategories-Hero",
+          "value": "pf-de38b00d"
+        },
+        {
+          "label": "V1-SubCategories-contentlist",
+          "value": "pf-e4ce4ad6"
+        },
+        {
+          "label": "V1-Super-Categories-Hero",
+          "value": "pf-49b5c71b"
+        },
+        {
+          "label": "V2 - Pre-footer 3/4 centered CTA",
+          "value": "pf-0cee6592"
+        },
+        {
+          "label": "V1-Super-Categories-Feature-carousel",
+          "value": "pf-4d3d9e23"
+        },
+        {
+          "label": "V1-Categories-3Column",
+          "value": "pf-12de2793"
+        },
+        {
+          "label": "V1-SubCategories-4Column",
+          "value": "pf-f4140383"
+        },
+        {
+          "label": "V1-SubCategories-Feature-2column",
+          "value": "pf-f9060b63"
+        },
+        {
+          "label": "Footer Navigation",
+          "value": "pf-df7df53a"
+        },
+        {
+          "label": "V1-Comprehensive-Calibration-Services-No-Image",
+          "value": "pf-e3e593f2"
+        },
+        {
+          "label": "V1-Categories-4Column",
+          "value": "pf-9cd14cc0"
+        },
+        {
+          "label": "V1-Categories-5Column",
+          "value": "pf-e163a046"
+        },
+        {
+          "label": "Pretty Griddy",
+          "value": "pf-2379eaef"
+        },
+        {
+          "label": "Crystal pressure",
+          "value": "pf-ef6617ac"
+        },
+        {
+          "label": "V2 - General 2-column with 2x2 list (left copy - r",
+          "value": "pf-221206f6"
+        },
+        {
+          "label": "V3- CalCloud",
+          "value": "pf-71d05709"
+        },
+        {
+          "label": "V3-Comprehensive Calibration Services",
+          "value": "pf-3b96848f"
+        },
+        {
+          "label": "V2 - Categories 5-column (dope snow)",
+          "value": "pf-f28cd468"
+        },
+        {
+          "label": "V2 - General 2-column (left copy - right accordion",
+          "value": "pf-e7c735ab"
+        },
+        {
+          "label": "V3-Sub-Sub-Categpry Copy",
+          "value": "pf-346025d2"
+        },
+        {
+          "label": "V2 - General 2-column (left copy - right focal poi",
+          "value": "pf-40a2a68d"
+        },
+        {
+          "label": "V2 - Centered card 3-column",
+          "value": "pf-93d4206d"
+        },
+        {
+          "label": "V2 -  Hero sub category",
+          "value": "pf-7ba8d404"
+        },
+        {
+          "label": "V2 - Benefits grid 2x2",
+          "value": "pf-c56524ca"
+        },
+        {
+          "label": "V2 - General 2-column (left image - right grid wit",
+          "value": "pf-5653acb6"
+        },
+        {
+          "label": "V2 - Category (slideshow)",
+          "value": "pf-ef068e81"
+        },
+        {
+          "label": "V2 - General 2-column (left copy - right image 1:1",
+          "value": "pf-b958827e"
+        },
+        {
+          "label": "V2 - Benefits Banner",
+          "value": "pf-e003a3f3"
+        },
+        {
+          "label": "V2 - General 2-column (left image 1:1 - right copy",
+          "value": "pf-8e93f72e"
+        },
+        {
+          "label": "V2 - Pre-footer newsletter signup (left justified)",
+          "value": "pf-03fae344"
+        },
+        {
+          "label": "V2 - General 2-column tall (left copy - right imag",
+          "value": "pf-ff7029c8"
+        },
+        {
+          "label": "V1 - Quote and Newsletter",
+          "value": "pf-b8927335"
+        },
+        {
+          "label": "V2 - Benefits banner 3-column (with icons)",
+          "value": "pf-21305280"
+        },
+        {
+          "label": "V2 - Hero 3/4 right justified (parallax)",
+          "value": "pf-c876d86c"
+        },
+        {
+          "label": "V2- Hero 3/4 left justified",
+          "value": "pf-81627a7a"
+        },
+        {
+          "label": "V1 - General 2-column right accordion",
+          "value": "pf-8deb9e20"
+        },
+        {
+          "label": "V1 - Benefits Banner 3-column with icons",
+          "value": "pf-730ab3f8"
+        },
+        {
+          "label": "V1 - Table (left justified, non-mobile)",
+          "value": "pf-069841f1"
+        },
+        {
+          "label": "V1 - Pre-footer contact us (left justified, backgr",
+          "value": "pf-af5a6015"
+        },
+        {
+          "label": "V1 - General 3-column (center aligned with icon)",
+          "value": "pf-1013f5d4"
+        },
+        {
+          "label": "Benefits 2-column (left image - right grid)",
+          "value": "pf-9be2cbe3"
+        },
+        {
+          "label": "V1 - General 2-column (left image 1:1 - right copy",
+          "value": "pf-807bb7db"
+        },
+        {
+          "label": "V1 - 2-column cards (logo-copy)",
+          "value": "pf-bec9802f"
+        },
+        {
+          "label": "V1 - Pre-footer centered CTA",
+          "value": "pf-4e758617"
+        },
+        {
+          "label": "V1 - Hero 3/4 left justified (video background)",
+          "value": "pf-268b829e"
+        },
+        {
+          "label": "V1 - General 2-column (left copy - right focal poi",
+          "value": "pf-6a370172"
+        },
+        {
+          "label": "V1 - Hero 3/4 left justified (video background)",
+          "value": "pf-85646608"
+        },
+        {
+          "label": "V1 - Category 3-column (product slideshow)",
+          "value": "pf-03d22bca"
+        },
+        {
+          "label": "V1  - General 1-column accordion (mobile only)",
+          "value": "pf-9be51164"
+        },
+        {
+          "label": "V1 - General 2 Column Tall (left image - right cop",
+          "value": "pf-946bb1fc"
+        },
+        {
+          "label": "Footer Spacing",
+          "value": "pf-7c4ffc4d"
+        },
+        {
+          "label": "Sub-Sub Category Footer",
+          "value": "pf-abeb868f"
+        },
+        {
+          "label": "Sub-Sub Category Quality",
+          "value": "pf-a72ee2b3"
+        },
+        {
+          "label": "Sub-Sub Category Hero",
+          "value": "pf-3b25182a"
+        },
+        {
+          "label": "Hero for Category Service Pages",
+          "value": "pf-727df55c"
+        },
+        {
+          "label": "Section_2",
+          "value": "pf-5cb8f322"
+        },
+        {
+          "label": "On-Site Calibration Hero",
+          "value": "pf-61f6d42e"
+        },
+        {
+          "label": "Static Slim Boy",
+          "value": "pf-2b1dbf68"
+        },
+        {
+          "label": "Accordion_1",
+          "value": "pf-dba4900d"
+        },
+        {
+          "label": "Default Spaced Single Column",
+          "value": "pf-59837beb"
+        },
+        {
+          "label": "Section_1",
+          "value": "pf-d678f9f5"
+        },
+        {
+          "label": "Newsletter",
+          "value": "pf-502e8005"
+        },
+        {
+          "label": "Services Section",
+          "value": "pf-64be372b"
+        },
+        {
+          "label": "Maritime and DOD Shipboard Services",
+          "value": "pf-1382d7d6"
+        },
+        {
+          "label": "Services Section Accordion 2",
+          "value": "pf-4861c713"
+        },
+        {
+          "label": "Services Section",
+          "value": "pf-9cc642a1"
+        },
+        {
+          "label": "Benefits of Choosing Us",
+          "value": "pf-034a4136"
+        },
+        {
+          "label": "Shipboard Category Hero ",
+          "value": "pf-5d576e52"
+        },
+        {
+          "label": "Why Choose Us?",
+          "value": "pf-08e4f8d0"
+        },
+        {
+          "label": "Services Cleaning",
+          "value": "pf-683b7099"
+        },
+        {
+          "label": "Hero for Category",
+          "value": "pf-49c4bfb3"
+        },
+        {
+          "label": "Accredited Calibration Laboratory",
+          "value": "pf-de736120"
+        },
+        {
+          "label": "Hero Accredited Lab",
+          "value": "pf-e94af66d"
+        },
+        {
+          "label": "Calibration About Section 1",
+          "value": "pf-ff077d54"
+        },
+        {
+          "label": "Force Calibration Diagram",
+          "value": "pf-3ab92aa4"
+        },
+        {
+          "label": "Commitment to Quality and Accuracy",
+          "value": "pf-11a7ecdc"
+        },
+        {
+          "label": "Get a Quote",
+          "value": "pf-ef855073"
+        },
+        {
+          "label": "Contact Us Service 2",
+          "value": "pf-27a2306e"
+        },
+        {
+          "label": "Other Services List",
+          "value": "pf-9e784ccb"
+        },
+        {
+          "label": "Text Title for Revolution Slider Calibration Servi",
+          "value": "pf-dc847182"
+        },
+        {
+          "label": "Contact Us",
+          "value": "pf-afe0c3a0"
+        },
+        {
+          "label": "Hero Force",
+          "value": "pf-a4afe0c3"
+        },
+        {
+          "label": "Request a Quote 2",
+          "value": "pf-2aa4afe0"
+        },
+        {
+          "label": "Commitment to Quality and Accuracy - image right",
+          "value": "pf-9144a9e7"
+        },
+        {
+          "label": "Global Support and Integration",
+          "value": "pf-f66d6699"
+        },
+        {
+          "label": "Tab section with stacked text and image ",
+          "value": "pf-3ee23e6c"
+        },
+        {
+          "label": "Service Levels Table",
+          "value": "pf-0e70f96e"
+        },
+        {
+          "label": "Testimonials_test",
+          "value": "pf-5c27a230"
+        },
+        {
+          "label": "Logo Test",
+          "value": "pf-784ccbf4"
+        },
+        {
+          "label": "EMM Hero",
+          "value": "pf-fa03d3e4"
+        },
+        {
+          "label": "CalCloud Section (Calibrations)",
+          "value": "pf-479ccc1a"
+        },
+        {
+          "label": "Comprehensive Calibration Services",
+          "value": "pf-9a9ecd53"
+        },
+        {
+          "label": "Brands We Work With",
+          "value": "pf-461e79fc"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Find and edit your section on the [section listing](https://56818d-e0.myshopify.com/admin/apps/pagefly/sections)"
+    },
+    {
+      "type": "paragraph",
+      "content": "To add block to a section, please use the App Block element on PageFly section editor."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PageFly Section"
+    }
+  ]
+}
+{% endschema %}

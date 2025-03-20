@@ -1,0 +1,100 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{- 'custom-component-collection-hero-v2.css' | asset_url | stylesheet_tag }}
+{% assign collection_background = collection.metafields.custom.hero_banner_image %}
+
+{%- style -%}
+  @media screen and (max-width: 749px) {
+    .collection-hero--with-image .collection-hero__inner {
+      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+    }
+    .collection-hero__inner {
+    display: flex;
+    flex-direction: column;
+    }
+    .collection-hero__image-container {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    .collection-hero__image-container.media {
+      padding:20px !important;
+    }
+    .collection-hero__image-contianer img {
+      width:50% !important;
+
+    }
+  }
+{%- endstyle -%}
+{% comment %} Container {% endcomment %}
+<div
+  class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient"
+>
+  <div
+    class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+    style="background-image: url('{{ collection_background }}'); background-size: cover; background-position:bottom; padding:30px; min-height=350px;"
+  >
+    {%- if section.settings.show_collection_image and collection.image -%}
+      <div
+        class="collection-hero__image-container media"
+        style="background-color:transparent; border:5px solid #d92f29; padding:50px;"
+      >
+        <div class="collection-hero__image-container__frame">
+          <img
+            srcset="
+              {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ collection.image | image_url }} {{ collection.image.width }}w
+            "
+            src="{{ collection.image | image_url: width: 750 }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+            alt="{{ collection.image.alt | escape }}"
+            style="
+                  max-height:300px;
+                object-fit:cover;
+                object-position:center;
+                aspect-ratio:3/2;
+              position:relative;
+            "
+          >
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Banner v2",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    // {
+    //   "type": "checkbox",
+    //   "id": "show_collection_description",
+   //   "default": true,
+    //   "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    // },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [{"name":"Custom Collection Banner v2"}]
+}
+{% endschema %}

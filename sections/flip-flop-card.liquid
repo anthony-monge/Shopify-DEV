@@ -1,0 +1,55 @@
+{% comment %}
+  {% assign header = 'Original Header' %}
+  {% assign paragraph = 'This is the paragraph text that will replace the header on hover.' %}
+{% endcomment %}
+
+{% if section.blocks.card %}
+  <div style="background-image:{{ section.blocks.card.card-background }}; object-fit:cover; height:100%; width:100%;">
+    <h2 id="hover-header">{{ section.blocks.card.header }}</h2>
+    <p id="hover-paragraph" style="display: none;">{{ section.blocks.card.paragraph }}</p>
+  </div>
+
+  <script>
+    document.getElementById('hover-header').addEventListener('mouseover', function() {
+      document.getElementById('hover-header').style.display = 'none';
+      document.getElementById('hover-paragraph').style.display = 'block';
+    });
+
+    document.getElementById('hover-header').addEventListener('mouseout', function() {
+      document.getElementById('hover-header').style.display = 'block';
+      document.getElementById('hover-paragraph').style.display = 'none';
+    });
+  </script>
+{% endif %}
+{% schema %}
+{
+  "name": "Flip Flop Card",
+  "class": "section",
+  "presets": [{"name":"Flip Flip Card"}],
+  "blocks": [
+    {
+    "name":"card",
+      "type": "card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Header",
+          "default": "Original Header"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "This is the paragraph text that will replace the header on hover."
+        },
+        {
+          "type": "image_picker",
+          "id": "card-background",
+          "label": "Background Image"
+        }
+      ]
+    },
+  ]
+  }
+{% endschema %}

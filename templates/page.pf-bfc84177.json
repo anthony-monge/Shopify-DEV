@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "pf-bfc84177": {
+      "type": "pf-bfc84177",
+      "settings": {}
+    },
+    "pagefly_section_kdH6GF": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-3ab92aa4"
+      }
+    }
+  },
+  "order": [
+    "pf-bfc84177",
+    "pagefly_section_kdH6GF"
+  ]
+}
