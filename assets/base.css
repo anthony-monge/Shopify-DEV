@@ -3578,7 +3578,7 @@ a.gm-target:not([href]) {
 summary.header__icon.header__icon--search.header__icon--summary.link.focus-inset.modal__toggle:after {
     content: "+10000000000";
     position: absolute;
-    left: 60px;
+    left: 300px;
     top: 19px;
 }
 }
