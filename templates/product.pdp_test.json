@@ -12,6 +12,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -46,13 +53,6 @@
           "type": "sku",
           "settings": {
             "text_style": "body"
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
           }
         },
         "collapsible_tab_Ay9YXt": {
@@ -90,6 +90,7 @@
         }
       },
       "block_order": [
+        "variant_picker",
         "price",
         "quantity_selector",
         "buy_buttons",
@@ -97,7 +98,6 @@
         "title",
         "description",
         "sku_pPMk9a",
-        "variant_picker",
         "collapsible_tab_Ay9YXt",
         "collapsible_tab_JU8eQf",
         "collapsible_tab_cMkf4F",
@@ -109,7 +109,7 @@
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
-        "gallery_layout": "columns",
+        "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "hover",
         "mobile_thumbnails": "hide",
