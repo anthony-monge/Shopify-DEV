@@ -12,37 +12,9 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
-        "sku_pPMk9a": {
-          "type": "sku",
-          "settings": {
-            "text_style": "body"
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "price": {
           "type": "price",
           "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
         },
         "quantity_selector": {
           "type": "quantity_selector",
@@ -55,6 +27,61 @@
             "show_gift_card_recipient": false
           }
         },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "sku_pPMk9a": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "collapsible_tab_Ay9YXt": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Features",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.prod_features | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_JU8eQf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Specifications",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.product_specifications | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_cMkf4F": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Resources",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -63,14 +90,17 @@
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "sku_pPMk9a",
-        "description",
         "price",
-        "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "vendor",
+        "title",
+        "description",
+        "sku_pPMk9a",
+        "variant_picker",
+        "collapsible_tab_Ay9YXt",
+        "collapsible_tab_JU8eQf",
+        "collapsible_tab_cMkf4F",
         "share"
       ],
       "settings": {
@@ -79,7 +109,7 @@
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
-        "gallery_layout": "thumbnail_slider",
+        "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "hover",
         "mobile_thumbnails": "hide",
@@ -89,55 +119,53 @@
         "padding_bottom": 12
       }
     },
-    "collapsible_content_jYBdrk": {
-      "type": "collapsible-content",
+    "multicolumn_AXEWA7": {
+      "type": "multicolumn",
       "blocks": {
-        "collapsible_row_xTGzRj": {
-          "type": "collapsible_row",
+        "column_fcrDJg": {
+          "type": "column",
           "settings": {
-            "heading": "Features",
-            "icon": "none",
-            "row_content": "{{ product.metafields.custom.prod_features | metafield_tag }}",
-            "page": ""
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "collapsible_row_F9ChpF": {
-          "type": "collapsible_row",
+        "column_pUeK3J": {
+          "type": "column",
           "settings": {
-            "heading": "Specifications",
-            "icon": "none",
-            "row_content": "{{ product.metafields.custom.product_specifications | metafield_tag }}",
-            "page": ""
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "collapsible_row_xTGzRj",
-        "collapsible_row_F9ChpF"
+        "column_fcrDJg",
+        "column_pUeK3J"
       ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "caption": "",
-        "heading": "Product Details",
-        "heading_size": "h2",
-        "heading_alignment": "left",
-        "layout": "none",
-        "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": true,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
         "image_ratio": "adapt",
-        "desktop_layout": "image_second",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "1721329359db7921a1": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
-    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -175,8 +203,7 @@
   },
   "order": [
     "main",
-    "collapsible_content_jYBdrk",
-    "1721329359db7921a1",
+    "multicolumn_AXEWA7",
     "related-products",
     "1727101698d0092d80",
     "17271030230c4be63c",
