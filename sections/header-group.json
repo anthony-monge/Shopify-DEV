@@ -29,9 +29,35 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "announcement_bar_xdRb7k": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_83m7wC": {
+          "type": "announcement",
+          "settings": {
+            "text": "Register today for the Accuracy Summit, SCI's half-day complimentary educational event on October 1, 2025!",
+            "link": "https://standardcal.com/pages/as2025"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_83m7wC"
+      ],
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "announcement_bar_xdRb7k"
   ]
 }
